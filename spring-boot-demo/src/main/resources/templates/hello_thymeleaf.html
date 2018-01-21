@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="" th:href="@{/css/hello.css}"></link>
+	</head>
+	<body>
+		<p th:inline='text'>
+			HI,[[${username}]]:[[${greet}]]!
+			<small th:text="${username}">Subtitle</small>
+		</p>
+	</body>
+	
+	<script th:inline='javascript'>
+	/*<![CDATA[*/
+
+	    var message = [[${username}]];
+	    console.log(message);
+	
+	/*]]>*/
+	</script>
+</html>
